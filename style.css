@@ -1,0 +1,158 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray: #9c91a5;
+    --light: lightblue;
+    --pink: lightcoral;
+    --red: #ff255c;
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: #FFF;
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width:100%;
+    margin:0 auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    color: var(--gray);
+}
+
+#what-to-do{
+    display: flex;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-to-do {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size:1.25rem;
+}
+
+#new-to-do::placeholder {
+    color: var(--gray);
+}
+
+#new-to-do-submit {
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right, var(--light), var(--red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new-to-do-submit:hover {
+    opacity: 0.8;
+}
+
+#new-to-do-submit:active {
+    opacity: 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width:100%;
+    margin:0 auto;
+}
+
+.to-do-list{
+    padding: 1rem;
+}
+
+.to-do-list h3{
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    color: var(--gray);
+}
+
+#to-dos .to-do {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom:  1rem;
+}
+
+#to-dos .to-do .content {
+    flex: 1 1 0%;
+}
+
+#to-dos .to-do .content .text {
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#to-dos .to-do .content .text:not(:read-only) {
+    color: var(--pink)
+}
+
+#to-dos .to-do .action {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.to-do .action button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4;
+}
+
+
+.to-do .action button:hover {
+    opacity: 0.8;
+}
+
+.to-do .action button:active {
+    opacity: 0.6;
+}
+
+.to-do .action .edit {
+    background-image: linear-gradient(to right, var(--light), var(--red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.to-do .action .delete {
+    color: crimson;
+}
